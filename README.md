@@ -17,7 +17,7 @@ A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaSc
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git@github.com:avinashnayak16/avinashportfolio.github.io.git
 cd portfolio
 ```
 
