@@ -1,111 +1,359 @@
-82% of storage used … If you run out of space, you can't save to Drive, back up Google Photos or use Gmail. Get 30 GB of storage for ₹59.00 ₹15.00/month for 2 months.
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Custom Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Global Styles */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px; /* Adding padding to the body to prevent sticking at the top */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligns content towards the top */
-    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --primary-800: #000;
+    --primary-700: #0077b6;
+    --primary-600: #0096c7;
+    --primary-500: #00b4d8;
+    --primary-400: #48cae4;
+    --primary-300: #90e0ef;
+    --primary-200: #ade8f4;
+    --primary-100: #caf0f8;
 }
 
-/* Main Container */
+/* Section Animations */
 section {
-    background-color: white;
-    padding: 2rem;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    animation: fadeIn 0.8s ease-out;
 }
 
-/* Header */
-header {
-    background-color: #4CAF50;
+/* Navigation Styles */
+nav {
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark nav {
+    background-color: rgba(3, 4, 94, 0.95);
+}
+
+.dark nav.scrolled {
+    background-color: rgba(3, 4, 94, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    transition: width 1.5s ease-in-out;
+    background-color: var(--primary-500);
+}
+
+/* Project Card Hover Effects */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.1);
+}
+
+.dark .project-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+}
+
+/* Skill Tags Animation */
+.skill-tag {
+    transition: transform 0.2s ease;
+    background-color: var(--primary-200);
+    color: var(--primary-800);
+}
+
+.dark .skill-tag {
+    background-color: var(--primary-800);
+    color: var(--primary-200);
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form Focus Styles */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.5);
+}
+
+.dark input:focus, .dark textarea:focus {
+    box-shadow: 0 0 0 3px rgba(144, 224, 239, 0.5);
+}
+
+/* Theme Toggle Animation */
+#theme-toggle {
+    transition: transform 0.3s ease;
+    background-color: var(--primary-200);
+    color: var(--primary-800);
+}
+
+.dark #theme-toggle {
+    background-color: var(--primary-800);
+    color: var(--primary-200);
+}
+
+#theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+/* Social Icons Hover Effect */
+.social-icon {
+    transition: transform 0.3s ease;
+    color: var(--primary-700);
+}
+
+.dark .social-icon {
+    color: var(--primary-300);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Download Resume Button Animation */
+.download-resume {
+    transition: all 0.3s ease;
+    color: var(--primary-700);
+}
+
+.dark .download-resume {
+    color: var(--primary-300);
+}
+
+.download-resume:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-100);
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: var(--primary-900);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-400);
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: var(--primary-600);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-500);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-500);
+}
+
+/* Loading Animation */
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Section Transitions */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-600);
     color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin: 0;
+.btn:hover {
+    background-color: var(--primary-700);
 }
 
-header p {
-    margin: 1rem 0 0;
+.dark .btn {
+    background-color: var(--primary-500);
 }
 
-/* Section Titles */
-h2 {
-    color: #4CAF50;
-    margin-bottom: 1rem;
+.dark .btn:hover {
+    background-color: var(--primary-400);
 }
 
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 }
 
-ul li {
-    background-color: #e7f7e7;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 5px;
+.btn:hover::after {
+    transform: translateX(0);
 }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+/* Card Hover Effects */
+.card {
+    position: relative;
+    overflow: hidden;
 }
 
-a:hover {
-    text-decoration: underline;
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 180, 216, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
 }
 
-/* Definition List */
-dl dt {
-    font-weight: bold;
-    color: #333;
-    margin-top: 1rem;
+.card:hover::before {
+    transform: translateX(100%);
 }
 
-dl dd {
-    margin-left: 1.5rem;
-    color: #666;
+/* Dark Mode Transitions */
+.dark-mode-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Blockquote */
-blockquote {
-    font-style: italic;
-    color: #555;
-    border-left: 4px solid #4CAF50;
-    padding-left: 1rem;
-    margin-top: 2rem;
+/* Mobile Menu Animation */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background-color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    section {
-        padding: 1.5rem;
+.dark .mobile-menu {
+    background-color: var(--primary-900);
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Form Validation Styles */
+input:invalid, textarea:invalid {
+    border-color: #ef4444;
+}
+
+input:valid, textarea:valid {
+    border-color: var(--primary-500);
+}
+
+/* Loading Spinner */
+.spinner {
+    animation: spin 1s linear infinite;
+    color: var(--primary-600);
+}
+
+.dark .spinner {
+    color: var(--primary-300);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
-
-    header {
-        padding: 1.5rem;
+    to {
+        transform: rotate(360deg);
     }
 }
+
+/* Custom Focus Styles */
+:focus-visible {
+    outline: 2px solid var(--primary-600);
+    outline-offset: 2px;
+}
+
+.dark :focus-visible {
+    outline-color: var(--primary-300);
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+} 
