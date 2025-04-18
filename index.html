@@ -1,64 +1,655 @@
-82% of storage used … If you run out of space, you can't save to Drive, back up Google Photos or use Gmail. Get 30 GB of storage for ₹59.00 ₹15.00/month for 2 months.
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Hello, I'm [Your Name] 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
-    </header>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avinash - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/AN.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white dark:bg-primary-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-primary-300 dark:bg-primary-800 backdrop-blur-sm z-50 shadow-lg border-b border-primary-400 dark:border-primary-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a
+              href="#home"
+              class="text-xl font-bold"
+            >
+              <span class="text-primary-700">A</span>
+              <span class="text-primary-600">v</span>
+              <span class="text-primary-500">i</span>
+              <span class="text-primary-400">n</span>
+              <span class="text-primary-600">a</span>
+              <span class="text-primary-700">s</span>
+              <span class="text-primary-800">h</span>
+            </a>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="#about"
+              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+              >Projects</a
+            >
+            <a
+              href="#business-cases"
+              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+              >Business Cases</a
+            >
+            <a
+              href="#contact"
+              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+              >Contact</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-primary-200 dark:bg-primary-800"
+            >
+              <i class="fas fa-sun dark:hidden"></i>
+              <i class="fas fa-moon hidden dark:block"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <section>
-        <h2>🛠️ Projects</h2>
-        <ul>
-            <li><strong>Project 1</strong>: A short description of your project1.</li>
-            <li><strong>Project 2</strong>: A short description of another project2.</li>
-        </ul>
-
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python, JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
-        </ul>
-
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
-
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Algorithmic Problem Solving</dd>
-
-            <dt>Course Code</dt>
-            <dd>Course Code Placeholder</dd>
-
-            <dt>Name</dt>
-            <dd>Your Name</dd>
-
-            <dt>SRN</dt>
-            <dd>Your SRN</dd>
-
-            <dt>Course Instructor</dt>
-            <dd>Instructor Name Placeholder</dd>
-
-            <dt>University</dt>
-            <dd>Your University Name</dd>
-
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>Google</dd>
-        </dl>
-
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-white to-primary-50 dark:from-primary-900 dark:to-primary-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1
+          class="text-5xl font-bold text-primary-900 dark:text-primary-100 mb-4"
+        >
+          Hi, I'm Avinash
+        </h1>
+        <p class="text-xl text-primary-800 dark:text-primary-200 mb-8">
+          Computer Science Engineering Student | Software Developer
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#projects"
+            class="bg-primary-600 text-primary-600 px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors border-2 border-primary-600 hover:border-primary-700"
+            >View My Work</a
+          >
+          <a
+            href="#contact"
+            class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 px-6 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-800 transition-colors"
+            >Contact Me</a
+          >
+        </div>
+      </div>
     </section>
-</body>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-primary-50 dark:bg-primary-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
+        >
+          About Me
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <p class="text-primary-800 dark:text-primary-200 mb-4">
+              I'm a passionate 3rd-year Computer Science Engineering student
+              with a strong drive for innovation and problem-solving. My journey
+              in technology is fueled by a deep curiosity about how things work
+              and a desire to create impactful solutions.
+            </p>
+            <p class="text-primary-800 dark:text-primary-200 mb-4">
+              Currently pursuing my degree, I'm constantly exploring new
+              technologies and frameworks to expand my knowledge and skills. I'm
+              particularly interested in full-stack development, system design,
+              and machine learning.
+            </p>
+            <p class="text-primary-800 dark:text-primary-200">
+              When I'm not coding, you can find me contributing to open-source
+              projects, participating in hackathons, or diving into technical
+              blogs and research papers to stay updated with the latest industry
+              trends.
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <div
+              class="w-64 h-64 bg-primary-200 dark:bg-primary-700 rounded-full overflow-hidden"
+            >
+              <!-- Add your profile picture here -->
+              <img
+                src="/images/IMG_5287.jpg"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
+        >
+          Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Programming Languages -->
+          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
+            <h3
+              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
+            >
+              Programming Languages
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >Python</span
+                  >
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >90%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary-500 h-2 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >JavaScript</span
+                  >
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >85%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary-500 h-2 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+             Uncaught SyntaxError: Unexpected identifier 'the'
+   <div class="flex justify-between mb-1">
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >Java</span
+                  >
+                  <span class="text-primary-800 dark:text-primary-200"
+                    >80%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
+                >
+                  <div
+                    class="bg-primary-500 h-2 rounded-full"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks & Tools -->
+          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
+            <h3
+              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
+            >
+              Frameworks & Tools
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >React.js</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Express</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >MongoDB</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Git</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Docker</span
+              >
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
+            <h3
+              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
+            >
+              Soft Skills
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Problem Solving</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Team Collaboration</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Communication</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Leadership</span
+              >
+              <span
+                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
+                >Time Management</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-primary-50 dark:bg-primary-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
+        >
+          Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="/projects/e-commerce.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3
+                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
+              >
+                E-Commerce Platform
+              </h3>
+              <p class="text-primary-800 dark:text-primary-200 mb-4">
+                A full-stack e-commerce platform with real-time inventory
+                management and payment integration.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >React</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >MongoDB</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <!-- <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >GitHub</a
+                >
+                <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >Live Demo</a
+                > -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="/projects/ai.png"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3
+                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
+              >
+                AI-Powered Chatbot
+              </h3>
+              <p class="text-primary-800 dark:text-primary-200 mb-4">
+                An intelligent chatbot using natural language processing to
+                provide customer support.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >TensorFlow</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >NLP</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <!-- <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >GitHub</a
+                >
+                <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >Live Demo</a
+                > -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="/projects/task.png"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3
+                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
+              >
+                Task Management App
+              </h3>
+              <p class="text-primary-800 dark:text-primary-200 mb-4">
+                A collaborative task management application with real-time
+                updates and team features.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >Vue.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >Firebase</span
+                >
+                <span
+                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
+                  >WebSocket</span
+                >
+              </div>
+              <div class="flex space-x-4">
+                <!-- <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >GitHub</a
+                >
+                <a
+                  href="#"
+                  class="text-primary-600 dark:text-primary-400 hover:underline"
+                  >Live Demo</a
+                > -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Cases Section -->
+    <section id="business-cases" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
+        >
+          Business Cases
+        </h2>
+        <div class="space-y-8">
+          <!-- Case 1 -->
+          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
+            <h3
+              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
+            >
+              System Design: Scalable Microservices Architecture
+            </h3>
+            <p class="text-primary-800 dark:text-primary-200 mb-4">
+              Designed and implemented a scalable microservices architecture for
+              a high-traffic e-commerce platform, resulting in a 40% improvement
+              in system performance and 99.99% uptime.
+            </p>
+            <div class="space-y-4">
+              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
+                Challenges:
+              </h4>
+              <ul
+                class="list-disc list-inside text-primary-800 dark:text-primary-200"
+              >
+                <li>Handling 10,000+ concurrent users</li>
+                <li>Ensuring data consistency across services</li>
+                <li>Minimizing latency in distributed systems</li>
+              </ul>
+              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
+                Solution:
+              </h4>
+              <ul
+                class="list-disc list-inside text-primary-800 dark:text-primary-200"
+              >
+                <li>Implemented event-driven architecture using Kafka</li>
+                <li>Used Redis for caching and session management</li>
+                <li>Deployed services using Kubernetes for auto-scaling</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
+            <h3
+              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
+            >
+              Performance Optimization: Database Query Optimization
+            </h3>
+            <p class="text-primary-800 dark:text-primary-200 mb-4">
+              Optimized database queries and implemented caching strategies for
+              a financial analytics platform, reducing query execution time by
+              75% and improving overall system responsiveness.
+            </p>
+            <div class="space-y-4">
+              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
+                Challenges:
+              </h4>
+              <ul
+                class="list-disc list-inside text-primary-800 dark:text-primary-200"
+              >
+                <li>Complex joins and aggregations on large datasets</li>
+                <li>Real-time data processing requirements</li>
+                <li>Maintaining data consistency with caching</li>
+              </ul>
+              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
+                Solution:
+              </h4>
+              <ul
+                class="list-disc list-inside text-primary-800 dark:text-primary-200"
+              >
+                <li>
+                  Implemented query optimization using indexes and materialized
+                  views
+                </li>
+                <li>Used Redis for caching frequently accessed data</li>
+                <li>Implemented database sharding for horizontal scaling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary-50 dark:bg-primary-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
+        >
+          Contact Me
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-primary-800 dark:text-primary-200"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-primary-800 dark:text-primary-200"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-primary-800 dark:text-primary-200 "
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary-600 text-primary-600 px-4 py-2 rounded-md border-2 border-primary-600 hover:bg-primary-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="flex flex-col justify-center space-y-6">
+            <div class="flex items-center space-x-4">
+              <i
+                class="fab fa-linkedin text-2xl text-primary-600 dark:text-primary-400"
+              ></i>
+              <a
+                href="https://www.linkedin.com/in/avinash-nayak-92a34525b/"
+                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+                target="_blank"
+                >LinkedIn Profile</a
+              >
+            </div>
+            <div class="flex items-center space-x-4">
+              <i
+                class="fab fa-github text-2xl text-primary-900 dark:text-primary-100"
+              ></i>
+              <a
+                href="https://github.com/avinashnayak16/"
+                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+                target="_blank"
+                >GitHub Profile</a
+              >
+            </div>
+            <div class="flex items-center space-x-4">
+              <i
+                class="fas fa-envelope text-2xl text-primary-600 dark:text-primary-400"
+              ></i>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=avinashvnayak1605@gmail.com"
+                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
+                target="_blank"
+              >
+                avinashvnayak1605@gmail.com
+              </a>
+            </div>
+            <div class="pt-4">
+              <a
+                href="https://drive.google.com/file/d/1L3PQhBzvcOKROBWrKcR3GazBE8RkEOmN/view?usp=sharing"
+                class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:underline" target="_blank">
+                <i class="fas fa-download mr-2"></i>
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-200 dark:bg-primary-900 py-8 border-t border-primary-300 dark:border-primary-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-primary-800 dark:text-primary-200">
+          &copy; 2025 Avinash. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
