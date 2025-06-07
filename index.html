@@ -1,655 +1,705 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avinash - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./favicon/AN.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="bg-white dark:bg-primary-900 transition-colors duration-300">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avinash's SpaceX Portfolio">
+    <link rel="icon" href="favicon/favicon.png" type="image/x-icon">
+    <title>Avinash's SpaceX Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay">
+        <div class="rocket-loader"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav
-      class="fixed w-full bg-primary-300 dark:bg-primary-800 backdrop-blur-sm z-50 shadow-lg border-b border-primary-400 dark:border-primary-700"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex items-center">
-            <a
-              href="#home"
-              class="text-xl font-bold"
-            >
-              <span class="text-primary-700">A</span>
-              <span class="text-primary-600">v</span>
-              <span class="text-primary-500">i</span>
-              <span class="text-primary-400">n</span>
-              <span class="text-primary-600">a</span>
-              <span class="text-primary-700">s</span>
-              <span class="text-primary-800">h</span>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo" aria-label="Go to home">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" aria-hidden="true">
+                    <title>Avinash Logo</title>
+                    <!-- Letter A -->
+                    <g class="letter_a">
+                        <polygon class="fill-white" points="15,49.3 24.5,49.3 27.2,42.1 42.8,42.1 45.5,49.3 55,49.3 40.5,18.6 29.5,18.6"></polygon>
+                        <polygon class="fill-white" points="30.2,35.8 39.8,35.8 35,25.2"></polygon>
+                    </g>
+                    <!-- Letter V -->
+                    <g class="letter_v">
+                        <polygon class="fill-white" points="65,18.6 75,18.6 85,42.5 95,18.6 105,18.6 90,49.3 80,49.3"></polygon>
+                    </g>
+                    <!-- Letter I -->
+                    <g class="letter_i">
+                        <rect class="fill-white" x="115" y="18.6" width="9" height="30.7"></rect>
+                    </g>
+                    <!-- Letter N -->
+                    <g class="letter_n">
+                        <polygon class="fill-white" points="135,18.6 135,49.3 144,49.3 144,32.1 160,49.3 170,49.3 170,18.6 161,18.6 161,35.8 145,18.6"></polygon>
+                    </g>
+                    <!-- Letter A (second) -->
+                    <g class="letter_a2">
+                        <polygon class="fill-white" points="185,49.3 194.5,49.3 197.2,42.1 212.8,42.1 215.5,49.3 225,49.3 210.5,18.6 199.5,18.6"></polygon>
+                        <polygon class="fill-white" points="200.2,35.8 209.8,35.8 205,25.2"></polygon>
+                    </g>
+                    <!-- Letter S -->
+                    <g class="letter_s">
+                        <path class="fill-white" d="M265.5,30.5H238.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H239.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H229.5c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C274.1,33.1,270.8,30.8,265.5,30.5z"></path>
+                    </g>
+                    <!-- Letter H -->
+                    <g class="letter_h">
+                        <rect class="fill-white" x="285" y="18.6" width="9" height="30.7"></rect>
+                        <rect class="fill-white" x="285" y="31.5" width="25" height="6"></rect>
+                        <rect class="fill-white" x="301" y="18.6" width="9" height="30.7"></rect>
+                    </g>
+                    <!-- Swoosh -->
+                    <g class="letter_swoosh">
+                        <path class="fill-white" d="M399,0.7c-80,4.6-117,38.8-125.3,46.9l-1.7,1.6h14.8C326.8,9.1,384.3,2,399,0.7L399,0.7z"></path>
+                    </g>
+                </svg>
             </a>
-          </div>
-          <div class="flex items-center space-x-4">
-            <a
-              href="#about"
-              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-              >About</a
-            >
-            <a
-              href="#skills"
-              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-              >Projects</a
-            >
-            <a
-              href="#business-cases"
-              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-              >Business Cases</a
-            >
-            <a
-              href="#contact"
-              class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-              >Contact</a
-            >
-            <button
-              id="theme-toggle"
-              class="p-2 rounded-lg bg-primary-200 dark:bg-primary-800"
-            >
-              <i class="fas fa-sun dark:hidden"></i>
-              <i class="fas fa-moon hidden dark:block"></i>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
             </button>
-          </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cases">Case Studies</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-white to-primary-50 dark:from-primary-900 dark:to-primary-800"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1
-          class="text-5xl font-bold text-primary-900 dark:text-primary-100 mb-4"
-        >
-          Hi, I'm Avinash
-        </h1>
-        <p class="text-xl text-primary-800 dark:text-primary-200 mb-8">
-          Computer Science Engineering Student | Software Developer
-        </p>
-        <div class="flex justify-center space-x-4">
-          <a
-            href="#projects"
-            class="bg-primary-600 text-primary-600 px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors border-2 border-primary-600 hover:border-primary-700"
-            >View My Work</a
-          >
-          <a
-            href="#contact"
-            class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 px-6 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-800 transition-colors"
-            >Contact Me</a
-          >
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bold Business Thinking for the Final Frontier</h1>
+            <p class="tagline">Engineering Business Solutions for Interplanetary Innovation</p>
+            <p class="hero-description">Welcome to my portfolio of data-driven business case studies inspired by the mission and ambition of SpaceX.</p>
+            <a href="#cases" class="cta-button">Explore Case Studies</a>
         </div>
-      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-primary-50 dark:bg-primary-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
-        >
-          About Me
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <p class="text-primary-800 dark:text-primary-200 mb-4">
-              I'm a passionate 3rd-year Computer Science Engineering student
-              with a strong drive for innovation and problem-solving. My journey
-              in technology is fueled by a deep curiosity about how things work
-              and a desire to create impactful solutions.
-            </p>
-            <p class="text-primary-800 dark:text-primary-200 mb-4">
-              Currently pursuing my degree, I'm constantly exploring new
-              technologies and frameworks to expand my knowledge and skills. I'm
-              particularly interested in full-stack development, system design,
-              and machine learning.
-            </p>
-            <p class="text-primary-800 dark:text-primary-200">
-              When I'm not coding, you can find me contributing to open-source
-              projects, participating in hackathons, or diving into technical
-              blogs and research papers to stay updated with the latest industry
-              trends.
-            </p>
-          </div>
-          <div class="flex items-center justify-center">
-            <div
-              class="w-64 h-64 bg-primary-200 dark:bg-primary-700 rounded-full overflow-hidden"
-            >
-              <!-- Add your profile picture here -->
-              <img
-                src="./images/IMG_5287.jpg"
-                alt="Profile"
-                class="w-full h-full object-cover"
-              />
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="Avinash" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <p>I'm Avinash, a systems thinker passionate about solving real-world engineering and business problems. This portfolio blends strategy, analytics, and deep tech to explore how companies like SpaceX can scale faster, better, and more sustainably.</p>
+                    <p>With a background in engineering and analytics, I combine technical expertise with business acumen to tackle complex challenges in the space industry.</p>
+                    <p></p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
-        >
-          Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Programming Languages -->
-          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
-            <h3
-              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
-            >
-              Programming Languages
-            </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >Python</span
-                  >
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >90%</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
-                >
-                  <div
-                    class="bg-primary-500 h-2 rounded-full"
-                    style="width: 90%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >JavaScript</span
-                  >
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >85%</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
-                >
-                  <div
-                    class="bg-primary-500 h-2 rounded-full"
-                    style="width: 85%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-             Uncaught SyntaxError: Unexpected identifier 'the'
-   <div class="flex justify-between mb-1">
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >Java</span
-                  >
-                  <span class="text-primary-800 dark:text-primary-200"
-                    >80%</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-primary-200 dark:bg-primary-700 rounded-full h-2"
-                >
-                  <div
-                    class="bg-primary-500 h-2 rounded-full"
-                    style="width: 80%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Frameworks & Tools -->
-          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
-            <h3
-              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
-            >
-              Frameworks & Tools
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >React.js</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Node.js</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Express</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >MongoDB</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Git</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Docker</span
-              >
-            </div>
-          </div>
-
-          <!-- Soft Skills -->
-          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
-            <h3
-              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
-            >
-              Soft Skills
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Problem Solving</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Team Collaboration</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Communication</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Leadership</span
-              >
-              <span
-                class="px-3 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded-full"
-                >Time Management</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-primary-50 dark:bg-primary-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
-        >
-          Projects
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <div
-            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-          >
-            <img
-              src="./projects/e-commerce.png"
-              alt="Project 1"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3
-                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
-              >
-                E-Commerce Platform
-              </h3>
-              <p class="text-primary-800 dark:text-primary-200 mb-4">
-                A full-stack e-commerce platform with real-time inventory
-                management and payment integration.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >React</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >Node.js</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >MongoDB</span
-                >
-              </div>
-              <div class="flex space-x-4">
-                <!-- <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >GitHub</a
-                >
-                <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >Live Demo</a
-                > -->
-              </div>
-            </div>
-          </div>
+    <section id="cases" class="projects">
+        <div class="container">
+            <h2>Case Studies</h2>
+            <div class="project-grid">
+                <!-- Autonomous Navigation System -->
+                <div class="project-card" data-rank="1">
+                    <div class="project-preview">
+                        <img src="images/Autonomous Navigation System.jpg" alt="Autonomous Navigation System">
+                        <div class="project-overlay">
+                            <div class="project-icon">🚀</div>
+                            <h3>Autonomous Navigation System</h3>
+                            <p>Real-time trajectory optimization using dynamic programming for precise spacecraft docking</p>
+                            <a href="cases/1_autonomous_navigation_system.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 2 -->
-          <div
-            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-          >
-            <img
-              src="./projects/ai.png"
-              alt="Project 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3
-                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
-              >
-                AI-Powered Chatbot
-              </h3>
-              <p class="text-primary-800 dark:text-primary-200 mb-4">
-                An intelligent chatbot using natural language processing to
-                provide customer support.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >Python</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >TensorFlow</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >NLP</span
-                >
-              </div>
-              <div class="flex space-x-4">
-                <!-- <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >GitHub</a
-                >
-                <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >Live Demo</a
-                > -->
-              </div>
-            </div>
-          </div>
+                <!-- Starlink Schedule -->
+                <div class="project-card" data-rank="2">
+                    <div class="project-preview">
+                        <img src="images/Starlink Schedule.jpg" alt="Starlink Schedule">
+                        <div class="project-overlay">
+                            <div class="project-icon">📅</div>
+                            <h3>Starlink Schedule</h3>
+                            <p>Advanced scheduling algorithms for optimal satellite constellation deployment and maintenance</p>
+                            <a href="cases/2_starlink_schedule.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Project 3 -->
-          <div
-            class="bg-white dark:bg-primary-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-          >
-            <img
-              src="./projects/task.png"
-              alt="Project 3"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3
-                class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-2"
-              >
-                Task Management App
-              </h3>
-              <p class="text-primary-800 dark:text-primary-200 mb-4">
-                A collaborative task management application with real-time
-                updates and team features.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >Vue.js</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >Firebase</span
-                >
-                <span
-                  class="px-2 py-1 bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded text-sm"
-                  >WebSocket</span
-                >
-              </div>
-              <div class="flex space-x-4">
-                <!-- <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >GitHub</a
-                >
-                <a
-                  href="#"
-                  class="text-primary-600 dark:text-primary-400 hover:underline"
-                  >Live Demo</a
-                > -->
-              </div>
+                <!-- Rocket Fault Detection -->
+                <div class="project-card" data-rank="3">
+                    <div class="project-preview">
+                        <img src="images/Rocket Fault Detection.jpg" alt="Rocket Fault Detection">
+                        <div class="project-overlay">
+                            <div class="project-icon">⚡</div>
+                            <h3>Rocket Fault Detection</h3>
+                            <p>Real-time monitoring system using sliding windows and segment trees for anomaly detection</p>
+                            <a href="cases/3_rocket_fault.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Launch Schedule -->
+                <div class="project-card" data-rank="4">
+                    <div class="project-preview">
+                        <img src="images/Launch Schedule.webp" alt="Launch Schedule">
+                        <div class="project-overlay">
+                            <div class="project-icon">📊</div>
+                            <h3>Launch Schedule</h3>
+                            <p>Predictive analytics and optimization for efficient launch window management</p>
+                            <a href="cases/4_launch_schedule.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collision Avoidance -->
+                <div class="project-card" data-rank="5">
+                    <div class="project-preview">
+                        <img src="images/Collision Avoidance.jpg" alt="Collision Avoidance">
+                        <div class="project-overlay">
+                            <div class="project-icon">🛰</div>
+                            <h3>Collision Avoidance</h3>
+                            <p>AI-powered system for real-time satellite collision prediction and avoidance</p>
+                            <a href="cases/5_collision_avoidance.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load Balance -->
+                <div class="project-card" data-rank="6">
+                    <div class="project-preview">
+                        <img src="images/Load Balance.jpeg" alt="Load Balance">
+                        <div class="project-overlay">
+                            <div class="project-icon">⚖️</div>
+                            <h3>Load Balance</h3>
+                            <p>Dynamic load distribution algorithms for optimal resource utilization</p>
+                            <a href="cases/6_load_balance.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Launch Pad -->
+                <div class="project-card" data-rank="7">
+                    <div class="project-preview">
+                        <img src="images/Launch Pad.jpg" alt="Launch Pad">
+                        <div class="project-overlay">
+                            <div class="project-icon">🏗️</div>
+                            <h3>Launch Pad</h3>
+                            <p>Efficient scheduling and resource allocation for launch pad operations</p>
+                            <a href="cases/7_launch_pad.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance System -->
+                <div class="project-card" data-rank="8">
+                    <div class="project-preview">
+                        <img src="images/Maintenance System.jpg" alt="Maintenance System">
+                        <div class="project-overlay">
+                            <div class="project-icon">🔧</div>
+                            <h3>Maintenance System</h3>
+                            <p>Predictive maintenance scheduling using machine learning algorithms</p>
+                            <a href="cases/8_maintenance_system.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Compression -->
+                <div class="project-card" data-rank="9">
+                    <div class="project-preview">
+                        <img src="images/Data Compression.jpg" alt="Data Compression">
+                        <div class="project-overlay">
+                            <div class="project-icon">📦</div>
+                            <h3>Data Compression</h3>
+                            <p>Advanced algorithms for efficient telemetry data compression and transmission</p>
+                            <a href="cases/9_data_compression.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource Allocation -->
+                <div class="project-card" data-rank="10">
+                    <div class="project-preview">
+                        <img src="images/Resource Allocation (ILS).jpg" alt="Resource Allocation">
+                        <div class="project-overlay">
+                            <div class="project-icon">📈</div>
+                            <h3>Resource Allocation (ILS)</h3>
+                            <p>Iterative Local Search algorithms for optimal resource distribution</p>
+                            <a href="cases/10_resource_allocation(ILS).html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Low Telemetry -->
+                <div class="project-card" data-rank="11">
+                    <div class="project-preview">
+                        <img src="images/Low Telemetry.avif" alt="Low Telemetry">
+                        <div class="project-overlay">
+                            <div class="project-icon">📡</div>
+                            <h3>Low Telemetry</h3>
+                            <p>Efficient data transmission protocols for low-bandwidth space communications</p>
+                            <a href="cases/11_low_telemetry.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starlink Collision Avoidance -->
+                <div class="project-card" data-rank="12">
+                    <div class="project-preview">
+                        <img src="images/Starlink Collision Avoidance.jpg" alt="Starlink Collision Avoidance">
+                        <div class="project-overlay">
+                            <div class="project-icon">🛸</div>
+                            <h3>Starlink Collision Avoidance</h3>
+                            <p>Specialized collision prediction and avoidance for Starlink constellation</p>
+                            <a href="cases/12_starlink_collision_avoidance.html" class="project-link">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Business Cases Section -->
-    <section id="business-cases" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
-        >
-          Business Cases
-        </h2>
-        <div class="space-y-8">
-          <!-- Case 1 -->
-          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
-            <h3
-              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
-            >
-              System Design: Scalable Microservices Architecture
-            </h3>
-            <p class="text-primary-800 dark:text-primary-200 mb-4">
-              Designed and implemented a scalable microservices architecture for
-              a high-traffic e-commerce platform, resulting in a 40% improvement
-              in system performance and 99.99% uptime.
-            </p>
-            <div class="space-y-4">
-              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
-                Challenges:
-              </h4>
-              <ul
-                class="list-disc list-inside text-primary-800 dark:text-primary-200"
-              >
-                <li>Handling 10,000+ concurrent users</li>
-                <li>Ensuring data consistency across services</li>
-                <li>Minimizing latency in distributed systems</li>
-              </ul>
-              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
-                Solution:
-              </h4>
-              <ul
-                class="list-disc list-inside text-primary-800 dark:text-primary-200"
-              >
-                <li>Implemented event-driven architecture using Kafka</li>
-                <li>Used Redis for caching and session management</li>
-                <li>Deployed services using Kubernetes for auto-scaling</li>
-              </ul>
-            </div>
-          </div>
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>🚀 SpaceX Algorithmic Innovation Dashboard</h2>
+            <p class="dashboard-subtitle">📊 Powered by Competitive Programming + Systems Thinking</p>
 
-          <!-- Case 2 -->
-          <div class="bg-white dark:bg-primary-800 p-6 rounded-lg shadow-sm">
-            <h3
-              class="text-xl font-semibold text-primary-900 dark:text-primary-100 mb-4"
-            >
-              Performance Optimization: Database Query Optimization
-            </h3>
-            <p class="text-primary-800 dark:text-primary-200 mb-4">
-              Optimized database queries and implemented caching strategies for
-              a financial analytics platform, reducing query execution time by
-              75% and improving overall system responsiveness.
-            </p>
-            <div class="space-y-4">
-              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
-                Challenges:
-              </h4>
-              <ul
-                class="list-disc list-inside text-primary-800 dark:text-primary-200"
-              >
-                <li>Complex joins and aggregations on large datasets</li>
-                <li>Real-time data processing requirements</li>
-                <li>Maintaining data consistency with caching</li>
-              </ul>
-              <h4 class="font-semibold text-primary-800 dark:text-primary-200">
-                Solution:
-              </h4>
-              <ul
-                class="list-disc list-inside text-primary-800 dark:text-primary-200"
-              >
-                <li>
-                  Implemented query optimization using indexes and materialized
-                  views
-                </li>
-                <li>Used Redis for caching frequently accessed data</li>
-                <li>Implemented database sharding for horizontal scaling</li>
-              </ul>
+            <!-- Executive Summary -->
+            <div class="dashboard-card">
+                <h3>✅ Executive Summary</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="summary-number">12</span>
+                        <span class="summary-label">Total Business Cases</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-number">28+</span>
+                        <span class="summary-label">Algorithmic Concepts</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-number">6+</span>
+                        <span class="summary-label">SpaceX Systems</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-number">10×-1000×</span>
+                        <span class="summary-label">Efficiency Gains</span>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Business Case KPIs -->
+            <div class="dashboard-card">
+                <h3>🧠 Business Case KPIs</h3>
+                <div class="kpi-table-container">
+                    <table class="kpi-table">
+                        <thead>
+                            <tr>
+                                <th>Case #</th>
+                                <th>Title</th>
+                                <th>DS & Algo Used</th>
+                                <th>Core Problem</th>
+                                <th>Efficiency Gain</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Collision Avoidance</td>
+                                <td>Graphs, A*, Heuristics</td>
+                                <td>Satellite collision prevention</td>
+                                <td>⚡ Fast 3D decisions</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ground Pass Scheduling</td>
+                                <td>Segment Trees, Range Queries</td>
+                                <td>Ground station comms</td>
+                                <td>🔁 ms rescheduling</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Fault Detection</td>
+                                <td>LCS, XOR, Anomaly Detection</td>
+                                <td>Early fault detection</td>
+                                <td>🛡️ 60-70% faster</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Cargo Routing</td>
+                                <td>Graph Algo, Dijkstra, DP</td>
+                                <td>Route optimization</td>
+                                <td>🚚 30-50% faster</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Health Scoring</td>
+                                <td>DP, Scoring, Subset Sum</td>
+                                <td>Mission abort priority</td>
+                                <td>⏱️ Real-time alerts</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Supply Chain</td>
+                                <td>Knapsack, Max Flow</td>
+                                <td>Inventory matching</td>
+                                <td>📦 80% fewer bottlenecks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Algorithm Categories -->
+            <div class="dashboard-card">
+                <h3>📌 Top Algorithms Used</h3>
+                <div class="algorithm-grid">
+                    <div class="algorithm-category">
+                        <h4>Range Queries</h4>
+                        <ul>
+                            <li>Segment Tree</li>
+                            <li>Sparse Table</li>
+                            <li>Fenwick Tree</li>
+                            <li>Mo's Algo</li>
+                        </ul>
+                    </div>
+                    <div class="algorithm-category">
+                        <h4>Search & AI</h4>
+                        <ul>
+                            <li>A*</li>
+                            <li>Uniform Cost Search</li>
+                            <li>BFS/DFS</li>
+                        </ul>
+                    </div>
+                    <div class="algorithm-category">
+                        <h4>DP & Substructure</h4>
+                        <ul>
+                            <li>Knapsack</li>
+                            <li>LCS</li>
+                            <li>Coin Sum</li>
+                        </ul>
+                    </div>
+                    <div class="algorithm-category">
+                        <h4>Graph Algorithms</h4>
+                        <ul>
+                            <li>Dijkstra</li>
+                            <li>Boruvka</li>
+                            <li>Max Flow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Impact -->
+            <div class="dashboard-card">
+                <h3>🧠 Performance Impact</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon">🚀</div>
+                        <h4>Launch Scheduling</h4>
+                        <p>Segment Trees, Mo's Algo</p>
+                        <span class="impact-result">Less idle time</span>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">📊</div>
+                        <h4>Telemetry Diagnostics</h4>
+                        <p>Persistent DS, XOR Logic</p>
+                        <span class="impact-result">Seconds analysis</span>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">🛰️</div>
+                        <h4>Satellite Networks</h4>
+                        <p>Graphs + A*</p>
+                        <span class="impact-result">Safer routing</span>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">🏭</div>
+                        <h4>Manufacturing</h4>
+                        <p>Knapsack, Max Flow</p>
+                        <span class="impact-result">Dynamic inventory</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- References and Reflection Section -->
+    <section id="references" class="references">
+        <div class="container">
+            <h2>📚 References and Citations</h2>
+            
+            <div class="references-card">
+                <h3>Foundational Algorithms and Data Structures</h3>
+                <ul class="reference-list">
+                    <li>
+                        <span class="reference-title">CSES Problem Set</span>
+                        <a href="https://cses.fi/problemset/" target="_blank" class="reference-link">https://cses.fi/problemset/</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">Mo's Algorithm Explanation & Applications</span>
+                        <a href="https://cp-algorithms.com/data_structures/mo_algorithm.html" target="_blank" class="reference-link">https://cp-algorithms.com/data_structures/mo_algorithm.html</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">Persistent Segment Trees</span>
+                        <a href="https://codeforces.com/blog/entry/52854" target="_blank" class="reference-link">https://codeforces.com/blog/entry/52854</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">A* Search Algorithm and Heuristics</span>
+                        <span class="reference-author">Russell & Norvig, Artificial Intelligence: A Modern Approach</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">Fenwick Tree / BIT</span>
+                        <span class="reference-author">Fenwick, P. M. (1994). A New Data Structure for Cumulative Frequency Tables</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="references-card">
+                <h3>SpaceX and Aerospace Domain</h3>
+                <ul class="reference-list">
+                    <li>
+                        <span class="reference-title">SpaceX Official Website</span>
+                        <a href="https://www.spacex.com/" target="_blank" class="reference-link">https://www.spacex.com/</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">Falcon 9 Launch Vehicle User Guide</span>
+                        <span class="reference-author">SpaceX Documentation</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">Starlink Satellite Network Whitepapers</span>
+                        <span class="reference-author">SpaceX Research Papers</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">NASA's Telemetry & Flight Data Handling Overview</span>
+                        <span class="reference-author">NASA Technical Reports Server</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">Orbital Mechanics and Collision Avoidance</span>
+                        <span class="reference-author">Curtis, H. D. (2013). Orbital Mechanics for Engineering Students</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="references-card">
+                <h3>Systems Design & Optimization</h3>
+                <ul class="reference-list">
+                    <li>
+                        <span class="reference-title">Ford-Fulkerson Max Flow Algorithm</span>
+                        <span class="reference-author">Ford, L.R., & Fulkerson, D.R. (1956). Maximal Flow through a Network</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">Graph Algorithms for Routing</span>
+                        <span class="reference-author">Cormen et al., Introduction to Algorithms (3rd Edition)</span>
+                    </li>
+                    <li>
+                        <span class="reference-title">Real-Time Systems and Scheduling Theory</span>
+                        <span class="reference-author">Liu, C. L., & Layland, J. W. (1973). Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="references-card">
+                <h3>Additional Resources and Tools</h3>
+                <ul class="reference-list">
+                    <li>
+                        <span class="reference-title">OEIS (Online Encyclopedia of Integer Sequences)</span>
+                        <a href="https://oeis.org/" target="_blank" class="reference-link">https://oeis.org/</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">Competitive Programming Techniques</span>
+                        <a href="https://www.geeksforgeeks.org/" target="_blank" class="reference-link">https://www.geeksforgeeks.org/</a>
+                    </li>
+                    <li>
+                        <span class="reference-title">SpaceX Launch Video & Telemetry Analysis</span>
+                        <span class="reference-author">Various open-source telemetry datasets</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="reflection-card">
+                <h3>📝 Concluding Reflection</h3>
+                <div class="reflection-content">
+                    <p>The 12 business cases developed here integrate <strong>core data structures and algorithms</strong> with <strong>practical aerospace challenges faced by SpaceX</strong>. By applying <strong>range query techniques, graph algorithms, dynamic programming, and persistent data structures</strong>, each case tackles a critical bottleneck in launch scheduling, telemetry analysis, orbital collision avoidance, and manufacturing supply chains.</p>
+                    
+                    <p>This synthesis demonstrates that:</p>
+                    <ul class="reflection-points">
+                        <li>Complex aerospace operations benefit tremendously from <strong>efficient algorithmic design</strong>, reducing latency and improving safety.</li>
+                        <li><strong>Persistent and versioned data structures</strong> enable seamless retrospective analysis essential in aerospace diagnostics.</li>
+                        <li><strong>Graph and heuristic search algorithms</strong> optimize resource routing and path planning in both orbital and ground contexts.</li>
+                        <li>Data structures such as <strong>segment trees, Fenwick trees, and Mo's algorithm</strong> empower rapid, scalable queries on large datasets.</li>
+                    </ul>
+                    
+                    <p>Ultimately, these cases underscore the <strong>symbiosis of advanced computer science and aerospace engineering</strong>, showcasing the vital role of software design in cutting-edge space exploration ventures like SpaceX.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>scikit-learn</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <ul>
+                        <li>Matplotlib</li>
+                        <li>Plotly</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Business</h3>
+                    <ul>
+                        <li>Financial Modeling</li>
+                        <li>SWOT Analysis</li>
+                        <li>Strategic Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SpaceX Section -->
+    <section id="why-spacex" class="why-spacex">
+        <div class="container">
+            <div class="mission-statement">
+                <h2>🚀 Why SpaceX?</h2>
+                <p class="spacex-mission">SpaceX isn't just a rocket company — it's a mission. It's about reshaping humanity's access to space, pushing the boundaries of innovation, and tackling engineering problems on an interplanetary scale.</p>
+            </div>
+
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <h3>🌌 My Vision</h3>
+                    <p>SpaceX represents everything I aspire to contribute to:</p>
+                    <ul>
+                        <li>Solving real-world, high-stakes problems</li>
+                        <li>Working at the intersection of software, systems, and aerospace</li>
+                        <li>Creating tools, platforms, and algorithms that power mission-critical technologies</li>
+                    </ul>
+                </div>
+
+                <div class="vision-card">
+                    <h3>👨‍💻 Why I'm Eligible</h3>
+                    <p>Over the last 1.5 years, I've been an integral part of AeroKLE — our university's prestigious aero design team. I served as an Avionics Engineer, where I:</p>
+                    <ul>
+                        <li>💡 Designed and implemented embedded control systems and telemetry pipelines</li>
+                        <li>📡 Developed simulation strategies for flight path optimization and onboard data logging</li>
+                        <li>🏆 Led our team to victory in national-level aero design competitions</li>
+                    </ul>
+                </div>
+
+                <div class="vision-card">
+                    <h3>🔧 Technical Alignment</h3>
+                    <p>The challenges I tackled in AeroKLE strongly align with what SpaceX engineers work on:</p>
+                    <div class="alignment-grid">
+                        <div class="alignment-item">
+                            <span class="icon">🔍</span>
+                            <span class="text">Fault detection in avionics</span>
+                            <a href="cases/6_load_balance.html" class="case-link">[Case #6]</a>
+                        </div>
+                        <div class="alignment-item">
+                            <span class="icon">🎯</span>
+                            <span class="text">Optimizing payload deployment</span>
+                            <a href="cases/1_rocket_launch.html" class="case-link">[Case #1]</a>
+                        </div>
+                        <div class="alignment-item">
+                            <span class="icon">📊</span>
+                            <span class="text">Handling real-time telemetry</span>
+                            <a href="cases/5_telemetry.html" class="case-link">[Case #5]</a>
+                        </div>
+                        <div class="alignment-item">
+                            <span class="icon">⏰</span>
+                            <span class="text">System-wide scheduling</span>
+                            <a href="cases/2_starlink_schedule.html" class="case-link">[Case #2]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section id="course-details" class="course-details">
+        <div class="container">
+            <h2>Course Details</h2>
+            <div class="course-content">
+                <div class="course-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Name: Avinash Valu Nayak</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>USN: 01FE22BCS204</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <span>Course Name: APS - Algorithm Problem Solving</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hashtag"></i>
+                        <span>Course Code: 24ECSE309</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Guide: Prakash Hegde</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-primary-50 dark:bg-primary-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-primary-900 dark:text-primary-100 mb-8"
-        >
-          Contact Me
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <form class="space-y-6">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-primary-800 dark:text-primary-200"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-primary-800 dark:text-primary-200"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-primary-800 dark:text-primary-200 "
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  class="mt-1 block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-primary-700 dark:border-primary-600 dark:text-primary-100 border-2 border-primary-600"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-primary-600 text-primary-600 px-4 py-2 rounded-md border-2 border-primary-600 hover:bg-primary-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-          <div class="flex flex-col justify-center space-y-6">
-            <div class="flex items-center space-x-4">
-              <i
-                class="fab fa-linkedin text-2xl text-primary-600 dark:text-primary-400"
-              ></i>
-              <a
-                href="https://www.linkedin.com/in/avinash-nayak-92a34525b/"
-                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-                target="_blank"
-                >LinkedIn Profile</a
-              >
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:avinashvalu@gmail.com">avinashvnayak1605@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/avinash-valu-nayak/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/avinashvalu" target="_blank">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-alt"></i>
+                        <a href="AVINASH NAYAK.pdf" target="_blank" class="resume-link">View Resume</a>
+                    </div>
+                </div>
             </div>
-            <div class="flex items-center space-x-4">
-              <i
-                class="fab fa-github text-2xl text-primary-900 dark:text-primary-100"
-              ></i>
-              <a
-                href="https://github.com/avinashnayak16/"
-                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-                target="_blank"
-                >GitHub Profile</a
-              >
-            </div>
-            <div class="flex items-center space-x-4">
-              <i
-                class="fas fa-envelope text-2xl text-primary-600 dark:text-primary-400"
-              ></i>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=avinashvnayak1605@gmail.com"
-                class="text-primary-800 dark:text-primary-200 hover:text-primary-900 dark:hover:text-primary-100"
-                target="_blank"
-              >
-                avinashvnayak1605@gmail.com
-              </a>
-            </div>
-            <div class="pt-4">
-              <a
-                href="https://drive.google.com/file/d/1L3PQhBzvcOKROBWrKcR3GazBE8RkEOmN/view?usp=sharing"
-                class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:underline" target="_blank">
-                <i class="fas fa-download mr-2"></i>
-                Download Resume
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary-200 dark:bg-primary-900 py-8 border-t border-primary-300 dark:border-primary-700">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-primary-800 dark:text-primary-200">
-          &copy; 2025 Avinash. All rights reserved.
-        </p>
-      </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Avinash's SpaceX Portfolio. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-  </body>
-</html>
+</body>
+</html> 
